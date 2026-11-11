@@ -1,0 +1,42 @@
+/* Ajustes visuales según carrito.html / checkout.html originales. */
+.pagina-carrito { background: #f6f9fd; min-height: 64vh; }
+.pagina-carrito .container { max-width: 1320px; }
+.pagina-carrito .carrito-productos, .pagina-carrito .carrito-recomendaciones, .pagina-carrito .resumen-compra { background: #fff; }
+.pagina-carrito .carrito-foto { flex-shrink: 0; width: 112px; height: 100px; display: flex; align-items: center; justify-content: center; }
+.pagina-carrito .carrito-foto img { width: 100%; height: 100%; object-fit: contain; }
+.pagina-carrito .carrito-nombre-enlace { color: var(--azul-oscuro); text-decoration: none; }
+.pagina-carrito .carrito-nombre-enlace:hover { color: var(--azul-electrico); }
+.pagina-carrito .carrito-item { min-width: 0; }
+.pagina-carrito .carrito-producto-info > div { min-width: 0; }
+.pagina-carrito .carrito-producto-info h3 { overflow-wrap: anywhere; }
+.pagina-carrito .carrito-subtotal-contenedor { min-width: 0; }
+.pagina-carrito .carrito-subtotal { overflow-wrap: anywhere; }
+.pagina-carrito .control-cantidad button:disabled { opacity: .35; cursor: not-allowed; }
+.pagina-carrito .recomendacion { min-width: 0; }
+.pagina-carrito .recomendacion > a { flex: 0 0 76px; width: 76px; height: 80px; }
+.pagina-carrito .recomendacion img { width: 100%; height: 100%; object-fit: contain; }
+.pagina-carrito .recomendacion-contenido { min-width: 0; }
+.pagina-carrito .recomendacion-contenido h3 { overflow-wrap: anywhere; }
+.pagina-carrito .btn-recomendacion { white-space: normal; text-align: center; }
+.checkout-pagina { background: #f6f8fb; min-height: 75vh; }
+.checkout-pagina .resumen-pedido { top: 20px; }
+.checkout-pagina .checkout-card { box-shadow: none; }
+.checkout-pagina .producto-checkout-imagen { flex-shrink: 0; }
+.checkout-pagina .producto-checkout-info { min-width: 0; overflow-wrap: anywhere; }
+.checkout-pagina .producto-checkout-precio { flex-shrink: 0; }
+/* Evita imágenes estiradas o superpuestas en todas las tarjetas. */
+.tarjeta-producto .producto-imagen img, .tarjeta-oferta .oferta-imagen { max-width: 100%; object-fit: contain; }
+.tarjeta-producto .producto-imagen { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.tarjeta-producto .producto-imagen img { flex: 0 1 auto; min-height: 0; }
+@media (max-width: 991.98px) { .checkout-pagina .resumen-pedido { position: static; } }
+@media (max-width: 767.98px) {
+ .pagina-carrito .carrito-item { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+ .pagina-carrito .carrito-producto-info { grid-column: 1/-1; }
+ .pagina-carrito .carrito-subtotal-contenedor { grid-column: auto; }
+ .pagina-carrito .carrito-foto { width: 88px; height: 88px; }
+ .pagina-carrito .carrito-precio::before { content: attr(data-label); display: block; color: #64748b; font-size: 12px; font-weight: normal; }
+ .pagina-carrito .recomendacion > a { flex-basis: 75px; }
+ .checkout-pagina .producto-checkout { gap: 8px; }
+ .checkout-pagina .producto-checkout-imagen { width: 50px; height: 50px; }
+ .checkout-pagina .producto-checkout-precio { font-size: .78rem; }
+}

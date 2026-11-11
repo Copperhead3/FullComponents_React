@@ -1,0 +1,123 @@
+/* Estilos compartidos por catálogo.html y producto.html.
+   Cargar después de css/style.css para conservar los colores de la tienda. */
+body {
+    background-color: #f5f6f8;
+}
+
+/* Encabezado: mantiene juntos logo, búsqueda y opciones en escritorio. */
+.barra-superior-contenido {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.barra-superior-contenido .buscador {
+    min-width: 180px;
+    margin: 0 !important;
+}
+
+.barra-superior-contenido .buscador .form-control {
+    min-width: 0;
+}
+
+.barra-superior-contenido .nav-opciones {
+    flex-shrink: 0;
+}
+
+.navbar-secundaria .navbar-nav {
+    gap: 0.25rem;
+}
+
+/* Tarjetas y panel de filtros del catálogo. */
+.panel-filtros,
+.tarjeta-producto,
+.ficha-producto,
+.seccion-producto {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.tarjeta-producto {
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.enlace-imagen {
+    display: block;
+    background-color: #fff;
+}
+
+.imagen-catalogo {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    padding: 18px;
+}
+
+.nombre-producto {
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+/* Ficha de producto. */
+.imagen-principal {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    padding: 24px;
+}
+
+.precio-producto {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.tarjeta-producto .precio-producto {
+    font-size: 1.4rem;
+}
+
+.ficha-producto .precio-producto {
+    font-size: 2rem;
+}
+
+.tabla-especificaciones th {
+    width: 40%;
+}
+
+@media (max-width: 767px) {
+    .barra-superior-contenido .navbar-brand {
+        margin-right: auto;
+    }
+
+    .barra-superior-contenido .nav-opciones {
+        order: 2;
+    }
+
+    .barra-superior-contenido .buscador {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .imagen-principal {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .imagen-catalogo {
+        height: 190px;
+    }
+
+    .tarjeta-producto .card-body-personalizado {
+        padding: 14px;
+    }
+}

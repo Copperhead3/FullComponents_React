@@ -1,0 +1,32 @@
+/* Ajustes específicos React: se conserva el diseño CSS del sitio HTML original. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { min-width: 0; max-width: 100%; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+.seccion-banner #carouselPrincipal { width: min(100% - 32px, 1296px); margin-inline: auto; border-radius: 14px; overflow: hidden; position: relative; }
+#carouselPrincipal .carousel-inner { width: 100%; overflow: hidden; }
+#carouselPrincipal .carousel-item { width: 100%; }
+#carouselPrincipal .carousel-item img { display: block; width: 100%; height: clamp(190px, 32vw, 450px); object-fit: cover; object-position: center; }
+#carouselPrincipal .carousel-control-prev, #carouselPrincipal .carousel-control-next { width: 8%; }
+#carouselPrincipal .carousel-indicators { z-index: 2; }
+.tarjeta-categoria { min-width: 0; overflow: hidden; gap: 0; }
+.tarjeta-categoria img, .tarjeta-categoria .img-categoria { display: block; width: 100%; max-width: 180px; height: 130px; object-fit: contain; flex: none; margin: 0 auto 18px; }
+.tarjeta-categoria h3 { overflow-wrap: anywhere; }
+.tarjeta-producto, .tarjeta-oferta { min-width: 0; overflow: hidden; }
+.producto-imagen { width: 100%; min-width: 0; max-width: 100%; flex: 0 0 auto; overflow: hidden; }
+.producto-imagen img { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: contain; object-position: center; }
+.producto-info { min-width: 0; }
+.producto-nombre, .producto-marca, .producto-categoria { overflow-wrap: anywhere; }
+.oferta-imagen { width: 100%; max-width: 100%; height: 145px; object-fit: contain; }
+.imagen-detalle { width: 100%; height: min(48vw, 440px); max-height: 440px; min-height: 200px; object-fit: contain; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; }
+.carrito-miniatura { width: 68px; height: 68px; object-fit: contain; vertical-align: middle; }
+.footer-principal a { color: #e2e8f0; }
+.footer-principal a:hover { color: #fff; }
+@media (max-width:767.98px) {
+ #carouselPrincipal .carousel-item img { height: auto; aspect-ratio: 16/8; object-fit: contain; background:#f1f5f9; }
+ .tarjeta-categoria img, .tarjeta-categoria .img-categoria { max-width: 120px; height: 90px; margin-bottom: 12px; }
+ .imagen-detalle { min-height: 220px; height: 300px; }
+ .tarjeta-producto .producto-imagen { height: 145px; }
+ .tarjeta-producto .producto-info { padding: 12px; }
+ .producto-precio { font-size: clamp(15px, 3vw, 22px); }
+}

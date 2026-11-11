@@ -1,0 +1,135 @@
+body {
+    background-color: #f6f8fb;
+}
+
+.checkout-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.checkout-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.checkout-numero {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #087cf0;
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    min-height: 45px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #087cf0;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(8, 124, 240, 0.15);
+}
+
+.resumen-pedido {
+    position: sticky;
+    top: 20px;
+}
+
+.precio-total {
+    color: #087cf0;
+}
+
+#btnConfirmarCompra {
+    background-color: #087cf0;
+    border-color: #087cf0;
+    font-weight: 600;
+}
+
+#btnConfirmarCompra:hover {
+    background-color: #0669cc;
+    border-color: #0669cc;
+}
+
+@media (max-width: 991.98px) {
+
+    .resumen-pedido {
+        position: static;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+
+    .checkout-card {
+        padding: 18px;
+    }
+
+}
+
+/* ========================================
+   PRODUCTOS DEL RESUMEN
+======================================== */
+
+.producto-checkout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.producto-checkout:last-child {
+    border-bottom: none;
+}
+
+.producto-checkout-imagen {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    padding: 5px;
+}
+
+.producto-checkout-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.producto-checkout-nombre {
+    margin: 0 0 3px 0;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.producto-checkout-precio {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
