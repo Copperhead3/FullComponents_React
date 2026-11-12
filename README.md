@@ -47,11 +47,3 @@ Rutas:
 | Carrito | `POST /api/v1/carritos/cliente/{id}`, `POST/DELETE /api/v1/carritos/cliente/{id}/items` |
 | Pedido | `POST/GET /api/v1/pedidos`, `GET /api/v1/pedidos/cliente/{id}` |
 
-
-## Diseño y criterios
-
-- Imágenes con `object-fit: contain` en fichas, categorías y tarjetas; carrusel responsivo sin superposiciones.
-- Se recuperaron secciones y clases del HTML original: categorías principales, banners, destacados, selección, beneficios y footer.
-- Se conservaron nombres de imágenes y recursos `public/img` del React proporcionado.
-- Consulta el detalle de las historias de usuario en `documents/CRITERIOS_ACEPTACION_REVISADOS.md` y el Excel original.
-
